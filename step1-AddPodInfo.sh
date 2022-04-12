@@ -10,7 +10,7 @@ flux create source git podinfo \
   --export > $FLUXWATCHDIR/podinfo-source.yaml
 
 git add -A && git commit -m "Add podinfo GitRepository"
-git push
+git pull && git push
 
 flux create kustomization podinfo \
   --target-namespace=default \
@@ -21,6 +21,6 @@ flux create kustomization podinfo \
   --export > $FLUXWATCHDIR/podinfo-kustomization.yaml
 
 git add -A && git commit -m "Add podinfo Kustomization"
-git push
+git pull && git push
 
 flux get kustomizations --watch
