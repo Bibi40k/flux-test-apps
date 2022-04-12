@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+REPONAME="flux-test-apps"
+FLUXWATCHDIR="./clusters/talos-test"
